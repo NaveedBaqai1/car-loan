@@ -55,7 +55,6 @@ class Search extends Component {
         years: this.state.years,
         deliveryDate: Moment(this.state.deliveryDate).format(),
       }
-      console.log(searches);
       this.props.searches(searches);
     }
   }
