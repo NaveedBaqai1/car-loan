@@ -61,7 +61,7 @@ describe('Clear Data', () => {
 
 describe('Populate Data', () => {
   it('expect state data summary for qoute to be populated', () => {
-    const date = 'Sun Apr 29 2019 11:58:42 GMT+0100 (British Summer Time)';
+    const date = Date.parse('Sun Apr 29 2019 11:58:42 GMT+0100 (British Summer Time)');
     const expectArray = [
       {month: '6th May 2019', repayment: 70.83, arrangementFee: 88, completionFee: 0},
       {month: '3rd June 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
