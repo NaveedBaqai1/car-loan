@@ -1,0 +1,17 @@
+.search {
+  .react-datepicker-wrapper {
+    width: 100%;
+    border-radius: .25rem;
+
+    .react-datepicker__input-container{
+      width: 100%;
+      border-radius: .25rem;
+    }
+
+    input {
+      padding: .375rem .75rem;
+      border-radius: .25rem;
+      width: 100%;
+    }
+  }
+}

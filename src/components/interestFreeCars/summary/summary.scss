@@ -1,0 +1,35 @@
+.summary {
+  .repayments{
+    margin-top: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+    max-width: 23rem;
+    max-height: 30rem;
+    overflow-y: auto;
+    border: 0.0625rem solid lightgrey;
+
+    .card {
+      .card-header {
+        .card-title {
+          margin: 0;
+        }
+      }
+      .card-footer {
+        div {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .final-summary{
+    margin-top: 0.5rem;
+    .total {
+      padding-left: 1.5rem;
+      font-size: 1.5rem;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.main {
+  header {
+      background-color: #2C3637;
+      color: #ffffff;
+      margin: 0;
+      border-radius: 0;
+      border-bottom: 3px solid #ffde00;
+
+      h2 {
+        color: #ffde00;
+      }
+
+      .car-image {
+        max-width: 80%;
+      }
+  }
+
+  section {
+    padding-bottom: 0;
+  }
+}
