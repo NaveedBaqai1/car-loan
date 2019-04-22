@@ -12,7 +12,7 @@ class Summary extends Component {
    }
 
   componentWillReceiveProps = (newProps) => {
-    this.populateSummaryData(
+    this.populateRepaymentData(
       newProps.price, newProps.deposit,
       newProps.years, newProps.deliveryDate,
       newProps.arrangementFee, newProps.completionFee
@@ -23,7 +23,7 @@ class Summary extends Component {
     this.setState({ data: [] });
   };
 
-  populateSummaryData = (price, deposit, years, date, arrangementFee, completionFee) => {
+  populateRepaymentData = (price, deposit, years, date, arrangementFee, completionFee) => {
     const monthsRequired = years * 12;
     this.clearData();
     for (let i = 1; i <= monthsRequired; i++) {

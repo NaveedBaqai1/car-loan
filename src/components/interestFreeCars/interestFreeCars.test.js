@@ -79,7 +79,7 @@ describe('Populate Data', () => {
     const wrapper = shallow(<Summary />);
     wrapper.setState({ data: [1, 2, 3] });
     expect(wrapper.state('data')).toEqual([1, 2, 3]);
-    wrapper.instance().populateSummaryData(1000, 150, 1, date, 88.00, 20.00);
+    wrapper.instance().populateRepaymentData(1000, 150, 1, date, 88.00, 20.00);
     expect(wrapper.state('data')).toEqual(expectArray);
   });
 });
