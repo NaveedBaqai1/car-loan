@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'moment';
 import { monthlyRepayment } from './../commonFunctions.js';
-import "./summary.scss";
+import './summary.scss';
 
 class Summary extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Summary extends Component {
       this.setState(state => {
         state.data.push(
           {
-            month: Moment(date).add(i, 'months').startOf('month').add(6 - Moment().day("Monday").day() ,'days').startOf('week').day(1).format("Do MMMM YYYY"),
+            month: Moment(date).add(i, 'months').startOf('month').add(6 - Moment().day('Monday').day() ,'days').startOf('week').day(1).format("Do MMMM YYYY"),
             repayment: monthlyRepayment(price, deposit, years),
             arrangementFee: i === 1 ? parseFloat(arrangementFee) : 0,
             completionFee: i === monthsRequired ? parseFloat(completionFee): 0,
@@ -95,7 +95,7 @@ class Summary extends Component {
           <li>Payments are due on the first Monday of each month, beginning the month after delivery.</li>
           <li><b>£{parseFloat(this.props.arrangementFee).toFixed(2)}</b> arrangement fee will be charged and added to the first monthly payment.</li>
           <li><b>£{parseFloat(this.props.completionFee).toFixed(2)}</b> completion fee will be charged at the end of the loan term and added to the last monthly payment.</li>
-          <li>Delivery Date: <b>{Moment(this.props.deliveryDate).format("Do MMMM YYYY")}</b></li>
+          <li>Delivery Date: <b>{Moment(this.props.deliveryDate).format('Do MMMM YYYY')}</b></li>
           <li>Loan Amount: <b>£{(parseFloat(this.props.price)-parseFloat(this.props.deposit)).toFixed(2)}</b></li>
           <li>Deposit: <b>£{parseFloat(this.props.deposit).toFixed(2)}</b></li>
           <li>Number of monthly Repayments: <b>{this.props.years * 12}</b></li>

@@ -61,20 +61,20 @@ describe('Clear Data', () => {
 
 describe('Populate Data', () => {
   it('expect state data summary for qoute to be populated', () => {
-    const date = 'Sun Apr 21 2019 11:58:42 GMT+0100 (British Summer Time)';
+    const date = 'Sun Apr 29 2019 11:58:42 GMT+0100 (British Summer Time)';
     const expectArray = [
-      {month: "6th May 2019", repayment: 70.83, arrangementFee: 88, completionFee: 0},
-      {month: "3rd June 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "1st July 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "5th August 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "2nd September 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "7th October 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "4th November 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "2nd December 2019", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "6th January 2020", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "3rd February 2020", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "2nd March 2020", repayment: 70.83, arrangementFee: 0, completionFee: 0},
-      {month: "6th April 2020", repayment: 70.83, arrangementFee: 0, completionFee: 20},
+      {month: '6th May 2019', repayment: 70.83, arrangementFee: 88, completionFee: 0},
+      {month: '3rd June 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '1st July 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '5th August 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '2nd September 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '7th October 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '4th November 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '2nd December 2019', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '6th January 2020', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '3rd February 2020', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '2nd March 2020', repayment: 70.83, arrangementFee: 0, completionFee: 0},
+      {month: '6th April 2020', repayment: 70.83, arrangementFee: 0, completionFee: 20},
     ]
     const wrapper = shallow(<Summary />);
     wrapper.setState({ data: [1, 2, 3] });

@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Search from './../search/search';
 import Summary from './../summary/summary';
 import AffordableCars from './../affordableCars/affordableCars';
-import addDays from "date-fns/addDays";
-import "./main.scss";
+import addDays from 'date-fns/addDays';
+import './main.scss';
 import carImage from './../../../assets/car.png';
 
 class Main extends Component {
@@ -25,7 +25,7 @@ class Main extends Component {
   scrollToreference = () => {
     window.scrollTo({
         top: this.reference.offsetTop, 
-        behavior: "smooth"
+        behavior: 'smooth'
     });
   };
 

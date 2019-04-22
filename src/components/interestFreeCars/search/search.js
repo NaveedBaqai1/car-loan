@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Form, InputGroup, Button } from 'react-bootstrap';
-import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
 import Moment from 'moment';
-import addDays from "date-fns/addDays";
-import "./search.scss";
+import addDays from 'date-fns/addDays';
+import './search.scss';
 
 class Search extends Component {
   constructor(props) {
@@ -70,9 +70,9 @@ class Search extends Component {
                 <InputGroup.Text><b>£</b></InputGroup.Text>
               </InputGroup.Prepend>
               <Form.Control
-                type="number"
-                placeholder="10000"
-                aria-describedby="inputGroupPrepend"
+                type='number'
+                placeholder='10000'
+                aria-describedby='inputGroupPrepend'
                 required
                 onChange={this.handlePriceChange}
               />
@@ -89,9 +89,9 @@ class Search extends Component {
                 <InputGroup.Text><b>£</b></InputGroup.Text>
               </InputGroup.Prepend>
               <Form.Control
-                type="number"
-                placeholder="1500"
-                aria-describedby="inputGroupPrepend"
+                type='number'
+                placeholder='1500'
+                aria-describedby='inputGroupPrepend'
                 required
                 onChange={this.handleDepositChange}
               />
@@ -102,26 +102,26 @@ class Search extends Component {
           </Form.Group>
           <Form.Group>
             <Form.Label>No. of Finance Years</Form.Label>
-            <Form.Control as="select" 
+            <Form.Control as='select' 
               value={this.state.years}
               onChange={this.handleYearChange}>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+              <option value='1'>1</option>
+              <option value='2'>2</option>
+              <option value='3'>3</option>
             </Form.Control>
           </Form.Group>
           <Form.Group>
             <Form.Label>Delivery Date</Form.Label>
             <div>
               <DatePicker
-                dateFormat="dd/MM/YYYY"
+                dateFormat='dd/MM/YYYY'
                 minDate={addDays(new Date(), 1)}
                 selected={this.state.deliveryDate}
                 onChange={this.handleDateChange}
               />
             </div>
           </Form.Group>
-          <Button variant="success" onClick={this.handleSubmit}>
+          <Button variant='success' onClick={this.handleSubmit}>
             SEARCH
           </Button>
         </Form>

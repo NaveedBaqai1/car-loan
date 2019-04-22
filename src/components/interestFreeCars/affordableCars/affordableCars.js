@@ -4,7 +4,7 @@ import Loader from 'react-loader-spinner';
 import { monthlyRepayment } from './../commonFunctions.js';
 import searchCarsByMonthlyPayments from '../../../services/searchCarsByMonthlyPayments';
 import missingCarIcon from './../../../assets/car-icon.png';
-import "./affordableCars.scss";
+import './affordableCars.scss';
 
 class AffordableCars extends Component {
   constructor(props) {
