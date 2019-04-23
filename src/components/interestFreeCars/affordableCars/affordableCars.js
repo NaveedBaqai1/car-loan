@@ -28,7 +28,7 @@ class AffordableCars extends Component {
     await searchCarsByMonthlyPayments(price).then((response)=>{
       this.setState({ data: response });
       this.setState({ loading: false });
-    });
+    }).catch(this.setState({ loading: false }));
   };
   
   render = () => {
@@ -86,7 +86,7 @@ class AffordableCars extends Component {
             !this.state.loading 
             && this.state.sentRequest 
             && this.state.data.searchResults.length < 1
-            ? <h1>No Results Found.</h1> 
+            ? <h4 className="text-center">No Results Found.</h4> 
             : ''
           }
           {
