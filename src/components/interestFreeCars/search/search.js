@@ -59,7 +59,7 @@ class Search extends Component {
     }
   }
 
-  render = () => {
+  render() {
     return (
       <div className="search">
         <Form>

@@ -19,9 +19,7 @@ class Summary extends Component {
     );
   }
 
-  clearData = () => {
-    this.setState({ data: [] });
-  };
+  clearData = () => this.setState({ data: [] });
 
   populateRepaymentData = (price, deposit, years, date, arrangementFee, completionFee) => {
     const monthsRequired = years * 12;
@@ -44,7 +42,7 @@ class Summary extends Component {
     return parseFloat(((price - deposit) + fee).toFixed(2));
   };
   
-  render = () => {
+  render() {
     const populateMonthlyRepayments = this.state.data.map((item, index) => 
       <div key={index}>
         <div className="card bg-light mb-3">

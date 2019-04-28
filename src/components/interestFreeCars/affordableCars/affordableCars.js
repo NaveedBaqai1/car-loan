@@ -31,7 +31,7 @@ class AffordableCars extends Component {
     }).catch(this.setState({ loading: false }));
   };
   
-  render = () => {
+  render() {
     const filteredCars = this.state.data.searchResults.filter(item => item.isReserved === false);
     const carResults = 
       <div className="content">
