@@ -25,10 +25,14 @@ class AffordableCars extends Component {
 
   searchingCar = async (price) => {
     this.setState({ loading: true, sentRequest: true });
-    await searchCarsByMonthlyPayments(price).then((response)=>{
-      this.setState({ data: response });
+    try {
+      await searchCarsByMonthlyPayments(price).then((response)=>{
+        this.setState({ data: response });
+        this.setState({ loading: false });
+      });
+    } catch {
       this.setState({ loading: false });
-    }).catch(this.setState({ loading: false }));
+    }
   };
   
   render() {
